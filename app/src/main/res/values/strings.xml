@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Mother Dairy</string>
+    <string name="login">LOGIN</string>
+    <string name="Username">Email</string>
+    <string name="forgot_your_password">FORGOT YOUR PASSWORD !</string>
+    <string name="Password">Password</string>
+    <string name="loading">Loading…</string>
+    <string name="auth_failed">Email Id or Password Incorrect !</string>
+    <string name="show_pwd">Show Password</string>
+    <string name="hide_pwd">Hide Password</string>
+
+    <string name="facebook_app_id">1765628653696022</string>
+    <string name="fb_login_protocol_scheme">fb1765628653696022</string>
+    <string name="facebook_status_fmt">Facebook User: %s</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="Signup">Not a Member Yet? Sign Up Here!</string>
+    <string name="signuppage">SIGN UP HERE !</string>
+    <string name="alreadyuser">Already Have Account? Login Here.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout">Logout</string>
+    <string name="profilename">Profile Name</string>
+    <string name="mother_dairy_welcomes_you">Mother Dairy Welcomes You !</string>
+    <string name="Appname">Mother Dairy</string>
+
+
+</resources>

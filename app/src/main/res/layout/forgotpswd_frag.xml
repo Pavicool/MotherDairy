@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/forgotpswdfrag"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbg"
+    tools:context="com.gupta.praveen.motherdairy.Forgotpswd">
+
+    <include layout="@layout/appbar_layout"
+        android:id="@+id/forgotpswdtoolbar"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:id="@+id/llayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp">
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="#2fa881"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:text="@string/forgot_your_password"
+                    android:textColor="#FFCC00"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="50dp" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Your Registered Email Id Here :"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_above="@+id/textInputLayout9"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+
+                <EditText
+                    android:id="@+id/etfemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Registered Email"
+                    android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/llayout"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BACK"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                android:layout_toEndOf="@+id/textView6"
+                android:layout_toRightOf="@+id/textView6"
+                  android:gravity="center"
+                android:layout_marginLeft="150dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

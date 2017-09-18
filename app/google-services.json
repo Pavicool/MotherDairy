@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "786153712548",
+    "firebase_url": "https://motherdairy-dd176.firebaseio.com",
+    "project_id": "motherdairy-dd176",
+    "storage_bucket": "motherdairy-dd176.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786153712548:android:8b88447dbe6276d3",
+        "android_client_info": {
+          "package_name": "com.gupta.praveen.motherdairy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786153712548-acgbjcs11a0eut8oeia4ao64t752vqnk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gupta.praveen.motherdairy",
+            "certificate_hash": "8bacb43ffbb16d962a79df60d4da3466e1963da7"
+          }
+        },
+        {
+          "client_id": "786153712548-dfpfqkfdqtr02jno50aejun9evaqunlv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbfP197slgeBsR0zInsUzz3XHT433M0cU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786153712548-dfpfqkfdqtr02jno50aejun9evaqunlv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

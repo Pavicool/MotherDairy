@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signupfrag"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbg">
+    <android.support.v7.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp">
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:background="#2fa881"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="50dp"
+                android:text="@string/signuppage"
+                android:textColor="#FFCC00"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="50dp" />
+        </RelativeLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:ems="10"
+                android:inputType="textPersonName"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter Address"
+                android:inputType="textPostalAddress" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/mobno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Mobile No"
+                android:inputType="phone" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/mEmailField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Id"
+                android:ems="10"
+                android:inputType="textEmailAddress"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/pswd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:ems="10"
+            android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/confpswd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                android:ems="10"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/signuppagebtn"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_shape"
+            android:text="Sign Up"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:textColor="#FFCC00"
+            />
+        <TextView
+            android:id="@+id/logintv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/alreadyuser"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

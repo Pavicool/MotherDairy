@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_nearby"
+        icon="@drawable/ic_nearby"
+        title="Nearby Store !"
+        barColorWhenSelected="@color/colorPrimary"/>
+    <tab
+        id="@+id/tab_friends"
+        icon="@drawable/ic_friends"
+        title="Refer a Friend"
+        barColorWhenSelected="#1abc9c"/>
+    <tab
+        id="@+id/tab_feedback"
+        icon="@drawable/ic_feedback"
+        title="Feedback"
+        barColorWhenSelected="#9b59b6"/>
+    <tab
+        id="@+id/tab_profile"
+        icon="@drawable/ic_profile"
+        title="Profile"
+        barColorWhenSelected="@color/active"/>
+</tabs>
