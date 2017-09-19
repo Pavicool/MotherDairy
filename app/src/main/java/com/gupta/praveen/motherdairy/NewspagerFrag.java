@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 public class NewspagerFrag extends Fragment implements View.OnClickListener{
@@ -23,9 +22,8 @@ public class NewspagerFrag extends Fragment implements View.OnClickListener{
 
         position = getArguments().getInt(POSITION_KEY);
 
-        View root = inflater.inflate(R.layout.childfrag2, container, false);
-        ImageView img= (ImageView) root.findViewById(R.id.offerimg2);
-        img.setOnClickListener(this);
+        View root = inflater.inflate(R.layout.newschildfrag, container, false);
+
 
         return root;
     }

@@ -25,7 +25,7 @@ public class Offerpager1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.offers_frag,container,false);
+        return inflater.inflate(R.layout.offer_frag1,container,false);
     }
 
     @Override

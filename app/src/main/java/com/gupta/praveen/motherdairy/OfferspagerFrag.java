@@ -67,7 +67,7 @@ public class OfferspagerFrag extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         position = getArguments().getInt(POSITION_KEY);
-        View root = inflater.inflate(R.layout.childfrag1, container, false);
+        View root = inflater.inflate(R.layout.offerchildfrag, container, false);
 
 //        ImageView img= (ImageView) root.findViewById(R.id.offerimg);
 //        img.setOnClickListener(this);

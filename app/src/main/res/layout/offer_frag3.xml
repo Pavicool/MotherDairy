@@ -3,24 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/indicator_2">
-
+    android:layout_height="match_parent">
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_height="200dp"
         app:contentPaddingLeft="@dimen/_20sdp"
         app:contentPaddingRight="@dimen/_20sdp">
 
         <ImageView
-            android:id="@+id/offerimg2"
+            android:id="@+id/profileoffer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="@dimen/_20sdp"
             android:paddingTop="@dimen/_20sdp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img2"
+            android:src="@drawable/promo9"
             android:tint="#11000000" />
     </android.support.v7.widget.CardView>
 </LinearLayout>

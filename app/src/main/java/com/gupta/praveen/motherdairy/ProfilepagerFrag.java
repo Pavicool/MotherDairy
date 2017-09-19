@@ -24,7 +24,9 @@ public class ProfilepagerFrag extends Fragment implements View.OnClickListener{
 
         position = getArguments().getInt(POSITION_KEY);
 
-        View root = inflater.inflate(R.layout.childfrag3, container, false);
+        View root = inflater.inflate(R.layout.profilechildfrag, container, false);
+        ImageView img1= (ImageView) root.findViewById(R.id.offerimg2);
+        img1.setOnClickListener(this);
         ImageView img= (ImageView) root.findViewById(R.id.offerimg3);
         img.setOnClickListener(this);
 
