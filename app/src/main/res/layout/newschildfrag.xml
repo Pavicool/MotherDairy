@@ -5,6 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/indicator_2">
-
+    <com.lsjwzh.widget.recyclerviewpager.LoopRecyclerViewPager
+        android:id="@+id/viewpager"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"/>
 
 </LinearLayout>
