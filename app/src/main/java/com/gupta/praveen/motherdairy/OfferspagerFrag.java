@@ -1,5 +1,8 @@
 package com.gupta.praveen.motherdairy;
 
+import android.animation.ValueAnimator;
+import android.graphics.Paint;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -7,11 +10,18 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.TranslateAnimation;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.pixelcan.inkpageindicator.InkPageIndicator;
@@ -82,6 +92,64 @@ public class OfferspagerFrag extends Fragment implements View.OnClickListener{
         mPager.setAdapter(new PagerViewAdapter(getChildFragmentManager()));
         mIndicator = (InkPageIndicator)view.findViewById(R.id.indicator);
         mIndicator.setViewPager(mPager);
+        final TextView tv= (TextView) view.findViewById(R.id.headertext);
+        tv.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        tv.setSelected(true);
+
+        // Showing Long Text Inside Textview not be cut by parent view or by screen
+        Paint textPaint = tv.getPaint();
+        String text = tv.getText().toString();//get text
+        int width = Math.round(textPaint.measureText(text));//measure the text size
+        ViewGroup.LayoutParams params =  tv.getLayoutParams();
+        params.width = width;
+        tv.setLayoutParams(params); //Refine
+
+//        DisplayMetrics displaymetrics = new DisplayMetrics();
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+//            getActivity().getWindowManager().getDefaultDisplay().getRealMetrics(displaymetrics);
+//        }
+//        int screenWidth = displaymetrics.widthPixels;
+//
+//        //this is optional. do not scroll if text is shorter than screen width
+//        //remove this won't effect the scroll
+//        if (width <= screenWidth) {
+//            //All text can fit in screen.
+//            return;
+//        }
+
+        //Animate Textview From Right To Left Smoothly
+//        Animation animationToLeft = new TranslateAnimation(0, -width, 0, 0);
+//        animationToLeft.setDuration(8000);
+//        animationToLeft.setRepeatMode(Animation.RESTART);
+//        animationToLeft.setRepeatCount(Animation.INFINITE);
+//        animationToLeft.setInterpolator(new LinearInterpolator());
+//        tv.setAnimation(animationToLeft);
+
+        //Animate TextView From Left To Right Smoothly
+//        Animation animationToRight = new TranslateAnimation(-400,400, 0, 0);
+//        animationToRight.setDuration(12000);
+//        animationToRight.setRepeatMode(Animation.RESTART);
+//        animationToRight.setRepeatCount(Animation.INFINITE);
+//        tv.setAnimation(animationToRight);
+//        String textRight = "Right marquue";
+//        tv.setText(textRight);
+
+        //Animate Textview From Right To Left Smoothly
+        final ValueAnimator animator = ValueAnimator.ofFloat(1.0f, -1.0f);
+        animator.setRepeatCount(ValueAnimator.INFINITE);
+        animator.setInterpolator(new LinearInterpolator());
+        animator.setDuration(17000L);
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                final float progress = (float) animation.getAnimatedValue();
+                final float width = tv.getWidth();
+                final float translationX = width * progress;
+                tv.setTranslationX(translationX);
+               // tv2.setTranslationX(translationX - width);
+            }
+        });
+        animator.start();
 
 
 /*After setting the adapter use the timer */
