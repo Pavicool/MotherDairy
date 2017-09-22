@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
+            android:fitsSystemWindows="true"
             android:src="@drawable/promo11"
             android:tint="#11000000" />
     </android.support.v7.widget.CardView>
