@@ -10,6 +10,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
@@ -24,10 +27,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.gupta.praveen.motherdairy.Recycler.Adapterrv;
+import com.gupta.praveen.motherdairy.data.Carddata;
 import com.pixelcan.inkpageindicator.InkPageIndicator;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import static com.facebook.FacebookSdk.getApplicationContext;
 
 
 public class OfferspagerFrag extends Fragment implements View.OnClickListener{
@@ -35,6 +44,8 @@ public class OfferspagerFrag extends Fragment implements View.OnClickListener{
     private int position;
     ViewPager mPager;
     InkPageIndicator mIndicator;
+
+    private RecyclerView recyclerView;
 
     int currentPage = 0;
     Timer timer;
@@ -88,6 +99,24 @@ public class OfferspagerFrag extends Fragment implements View.OnClickListener{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        ArrayList<Carddata> lista = new ArrayList<Carddata>();
+        lista.add(new Carddata("Image Num 1", R.drawable.promo1,0));
+        lista.add(new Carddata("Image Num 2", R.drawable.promo2,0));
+        lista.add(new Carddata("Image Num 3", R.drawable.promo11,0));
+        lista.add(new Carddata("Image Num 4", R.drawable.promo6,0));
+        lista.add(new Carddata("Image Num 5", R.drawable.promo5,0));
+        lista.add(new Carddata("Image Num 6", R.drawable.promo8,0));
+        lista.add(new Carddata("Image Num 7", R.drawable.promo9,0));
+
+        recyclerView= (RecyclerView) view.findViewById(R.id.rv);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager layout = new LinearLayoutManager(getApplicationContext());
+        layout.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layout);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(new Adapterrv(lista));
+
         mPager = (ViewPager)view.findViewById(R.id.pager);
         mPager.setAdapter(new PagerViewAdapter(getChildFragmentManager()));
         mIndicator = (InkPageIndicator)view.findViewById(R.id.indicator);
@@ -119,6 +148,7 @@ public class OfferspagerFrag extends Fragment implements View.OnClickListener{
 
         //Animate Textview From Right To Left Smoothly
 //        Animation animationToLeft = new TranslateAnimation(0, -width, 0, 0);
+//        animationToLeft.setFillAfter(true);
 //        animationToLeft.setDuration(8000);
 //        animationToLeft.setRepeatMode(Animation.RESTART);
 //        animationToLeft.setRepeatCount(Animation.INFINITE);
@@ -135,7 +165,7 @@ public class OfferspagerFrag extends Fragment implements View.OnClickListener{
 //        tv.setText(textRight);
 
         //Animate Textview From Right To Left Smoothly
-        final ValueAnimator animator = ValueAnimator.ofFloat(1.0f, -1.0f);
+        final ValueAnimator animator = ValueAnimator.ofFloat(1.0f, -0.50f);
         animator.setRepeatCount(ValueAnimator.INFINITE);
         animator.setInterpolator(new LinearInterpolator());
         animator.setDuration(17000L);

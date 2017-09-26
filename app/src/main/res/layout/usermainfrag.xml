@@ -98,6 +98,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/swipe_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+      <!---->
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/rv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/usertoolbar"
         android:layout_width="match_parent"
@@ -151,6 +168,7 @@
         app:startToolbarPosition="2dp"
         app:startXPosition="2dp"
         />
+
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/myScrollingContent"
         android:layout_width="match_parent"
@@ -159,6 +177,7 @@
         <!-- Your loooooong scrolling content here. -->
 
     </android.support.v4.widget.NestedScrollView>
+
     <com.roughike.bottombar.BottomBar
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"

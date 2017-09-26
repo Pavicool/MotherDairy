@@ -27,6 +27,8 @@
         android:textStyle="bold"
         android:ellipsize="marquee"
         android:focusable="true"
+        android:fillAfter="true"
+        android:fillEnabled="true"
         android:focusableInTouchMode="true"
         android:freezesText="true"
         android:fadingEdge="horizontal"
@@ -41,13 +43,13 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="200dp">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
     <com.pixelcan.inkpageindicator.InkPageIndicator
         android:id="@+id/indicator"
         android:padding="10dip"
@@ -58,5 +60,12 @@
         app:animationDuration="320"
         app:pageIndicatorColor="@android:color/darker_gray"
         app:currentPageIndicatorColor="@android:color/black"/>
+
     </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 </LinearLayout>

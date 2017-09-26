@@ -9,6 +9,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,10 +34,17 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.gupta.praveen.motherdairy.Recycler.Adapterrv;
+import com.gupta.praveen.motherdairy.data.Carddata;
 import com.gupta.praveen.motherdairy.model.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import github.chenupt.springindicator.SpringIndicator;
 import github.chenupt.springindicator.viewpager.ScrollerViewPager;
+
+import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class UsermainPage extends Fragment implements AppBarLayout.OnOffsetChangedListener{
     ImageView profilepic;
@@ -50,6 +60,8 @@ public class UsermainPage extends Fragment implements AppBarLayout.OnOffsetChang
     private Toolbar toolbar;
     ScrollerViewPager viewPager;
 
+
+
     FragmentManager fm;
     FragmentTransaction ft;
     MainActivity_frag mainActivityFrag;
@@ -59,6 +71,9 @@ public class UsermainPage extends Fragment implements AppBarLayout.OnOffsetChang
   //  private Context context;
     User userinfo;
     private String userID;
+
+    public UsermainPage() {
+    }
 
 
     @Override
@@ -115,6 +130,7 @@ public class UsermainPage extends Fragment implements AppBarLayout.OnOffsetChang
         username= (TextView) view.findViewById(R.id.profilename);
         mTitle          = (TextView) view.findViewById(R.id.main_textview_title);
         mTitleContainer = (LinearLayout) view.findViewById(R.id.main_linearlayout_title);
+
         viewPager  = (ScrollerViewPager) view.findViewById(R.id.pagerview);
         //Initializing Spring Indiactor
         SpringIndicator springIndicator = (SpringIndicator) view.findViewById(R.id.indicator);
